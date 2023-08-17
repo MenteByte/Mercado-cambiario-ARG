@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Actualizacion de precio de dolar & euro con calculadora incluida (Blue y Oficial) By MenteByte">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>MERCADO CAMBIARIO ARGENTINO</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+   <div class="container animate-fade">
+        <h1>Dólar & Euro ARG</h1>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h2>Dólar Oficial</h2>
+                <p><span id="official-buy"></span></p>
+                <p><span id="official-avg"></span></p>
+                <p><span id="official-sell"></span></p>
+            </div>
+            <div class="grid-item">
+                <h2>Dólar Blue</h2>
+                <p> <span id="blue-buy"></span></p>
+                <p> <span id="blue-avg"></span></p>
+                <p> <span id="blue-sell"></span></p>
+            </div>
+            <div class="grid-item">
+                <h2>Euro Oficial</h2>
+                <p> <span id="euro-official-buy"></span></p>
+                <p> <span id="euro-official-avg"></span></p>
+                <p><span id="euro-official-sell"></span></p>
+            </div>
+            <div class="grid-item">
+                <h2>Euro Blue</h2>
+                <p> <span id="euro-blue-buy"></span></p>
+                <p> <span id="euro-blue-avg"></span></p>
+                <p><span id="euro-blue-sell"></span></p>
+            </div>
+        </div>
+        <div class="brecha-container">
+            <h2>Brecha Cambiaria</h2>
+            <p><span id="dolar-brecha"></span></p>
+            <p><span id="euro-brecha"></span></p>
+        </div>
+    </div>
+
+    <div class="conversion-container animate-fade">
+        <h2>Calculadora de Conversión (Blue)</h2>
+        <input type="number" class="conversion-input" id="amount" placeholder="Cantidad">
+        <select class="conversion-input" id="currency">
+            <option value="ars">ARS</option>
+            <option value="usd">Dólares</option>
+            <option value="eur">Euros</option>
+        </select>
+        <span></span>
+        
+        <select class="conversion-input" id="target-currency">
+            <option value="usd">Dólares</option>
+            <option value="eur">Euros</option>
+            <option value="ars">ARS</option>
+        </select>
+        <button onclick="convertCurrencyBlue()" class="conversion-input">Convertir</button>
+        <p class="conversion-result"><span id="converted-amount-blue"></span></p>
+    </div>
+    
+    <div class="conversion-container animate-fade">
+        <h2>Calculadora de Conversión (Oficial)</h2>
+        <input type="number" class="conversion-input" id="amountOficial" placeholder="Cantidad">
+        <select class="conversion-input" id="currencyOficial">
+            <option value="ars">ARS</option>
+            <option value="usd">Dólares</option>
+            <option value="eur">Euros</option>
+        </select>
+        <span></span>
+        
+        <select class="conversion-input" id="target-currencyOficial">
+            <option value="usd">Dólares</option>
+            <option value="eur">Euros</option>
+            <option value="ars">ARS</option>
+        </select>
+        <button onclick="convertCurrencyOficial()" class="conversion-input">Convertir</button>
+        <p class="conversion-result"><span id="converted-amount-oficial"></span></p>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; Copyright by MenteByte</p>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
